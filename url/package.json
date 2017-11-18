@@ -1,0 +1,14 @@
+{
+  "name": "url",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "*",
+    "express": "3.2.6",
+    "node-url-shortener": "^1.0.1",
+    "mongodb": "^2.2.31"
+  }
+}
