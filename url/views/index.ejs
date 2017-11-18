@@ -11,5 +11,24 @@
 	<input type="submit" name="login" value="Submit">
 </form>
 <p>Result: <p><%= url%>
+
+<p>List of URLs</p>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>URL</th>
+
+</tr>
+</thead>
+<% for(var i=0; i<urls.length; i++){%>
+<tbody>
+<tr>
+  <td><a href=<%= urls[i].org_url%> target="_blank"><%= urls[i].short_url%></a></td>
+</tr>
+</tbody>
+<%}%>
+</table>
+
   </body>
 </html>
