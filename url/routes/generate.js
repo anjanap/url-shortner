@@ -15,8 +15,11 @@ exports.generate = function(req, res){
 	            if (err) throw err;
 	            else{
 	            	console.log(url);
-	            	opn(org);
-	            	 res.render('index', { url: url });
+	            	var col = mongo.collection('url_details');
+		              col.find().toArray(function(err,list){
+		           	console.log("URL: "+list[0]._id);
+	            	 res.render('index',{url:url,urls:list}); 
+		              });
 	            
 	            }
 	            });
